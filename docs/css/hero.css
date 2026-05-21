@@ -63,6 +63,7 @@
   grid-template-columns: 1fr 340px;
   gap: 4rem; align-items: center;
   position: relative; z-index: 2;
+  box-sizing: border-box;
 }
 
 .hero-left { max-width: 640px; }
@@ -95,6 +96,10 @@
   font-size: clamp(3.8rem, 8vw, 6.5rem);
   font-weight: 800; letter-spacing: -0.04em; line-height: .95;
   color: var(--white); margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #ffffff 30%, rgba(167,139,250,.88) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .hero-name br { display: block; }
 

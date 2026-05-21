@@ -22,8 +22,15 @@ footer {
 .footer-links a {
   font-size: .82rem; color: rgba(255,255,255,.3);
   transition: color .2s; font-weight: 500;
+  position: relative;
+}
+.footer-links a::after {
+  content: ''; position: absolute; left: 0; bottom: -1px;
+  width: 0; height: 1px;
+  background: var(--violet-glow); transition: width .2s;
 }
 .footer-links a:hover { color: var(--violet-glow); }
+.footer-links a:hover::after { width: 100%; }
 .footer-divider { height: 1px; background: var(--dark-border); }
 .footer-bottom {
   display: flex; align-items: center; justify-content: space-between;

@@ -66,12 +66,16 @@
 .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 .mobile-menu {
-  display: none; position: fixed;
-  top: 68px; left: 0; right: 0; z-index: 99;
-  flex-direction: column; padding: 1rem 2rem;
+  display: flex; flex-direction: column;
+  position: fixed; top: 68px; left: 0; right: 0; z-index: 99;
   background: var(--dark-2); border-bottom: 1px solid var(--dark-border);
+  padding: 0 2rem; max-height: 0; overflow: hidden;
+  transition: max-height .38s cubic-bezier(.4,0,.2,1), padding .3s ease;
 }
-.mobile-menu.open { display: flex; }
+.mobile-menu.open {
+  max-height: 480px;
+  padding: 1rem 2rem;
+}
 .mobile-link {
   padding: .875rem 0; font-size: .95rem; font-weight: 500;
   color: rgba(255,255,255,.55); border-bottom: 1px solid var(--dark-border);

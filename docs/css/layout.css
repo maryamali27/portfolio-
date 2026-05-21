@@ -38,6 +38,9 @@
   border-color: var(--violet); color: var(--violet);
   transform: translateY(-2px);
 }
+.btn-primary:active { transform: scale(.97) translateY(1px); box-shadow: 0 2px 12px rgba(124,58,237,.2); }
+.btn-outline:active  { transform: scale(.97) translateY(1px); }
+.btn-outline-dark:active { transform: scale(.97) translateY(1px); }
 .btn-full { width: 100%; justify-content: center; border-radius: var(--radius-sm); }
 
 /* ============================================================
@@ -70,7 +73,7 @@ section { padding: 7rem 0; }
   color: var(--text-muted); margin-top: .75rem;
   font-size: .975rem; line-height: 1.7; max-width: 520px;
 }
-.section-header { margin-bottom: 3.5rem; position: relative; z-index: 1; }
+.section-header { margin-bottom: 3.5rem; position: relative; z-index: 1; overflow: hidden; }
 
 /* Dark section header variant */
 .section-header-dark .section-eyebrow { color: var(--violet-glow); }
@@ -78,25 +81,17 @@ section { padding: 7rem 0; }
 .section-header-dark .section-title { color: var(--white); }
 .section-header-dark .section-sub { color: rgba(255,255,255,.4); }
 
-/* Decorative section numbers */
+/* Decorative section numbers — watermark behind section title */
 .section-num {
   position: absolute;
-  top: 2rem; right: 0;
+  bottom: -0.5rem; right: -0.25rem;
   font-family: 'Bricolage Grotesque', sans-serif;
-  font-size: clamp(5rem, 13vw, 10rem);
+  font-size: clamp(4.5rem, 12vw, 8.5rem);
   font-weight: 800; line-height: 1; letter-spacing: -.04em;
   color: transparent;
-  -webkit-text-stroke: 1.5px rgba(0,0,0,.055);
+  -webkit-text-stroke: 1px rgba(0,0,0,.045);
   pointer-events: none; -webkit-user-select: none; user-select: none; z-index: 0;
 }
 .section-num-light {
-  -webkit-text-stroke-color: rgba(255,255,255,.045);
-}
-
-/* Sections need relative positioning for the number */
-#about .container,
-#skills .container,
-#projects .container,
-#contact .container {
-  position: relative;
+  -webkit-text-stroke-color: rgba(255,255,255,.04);
 }

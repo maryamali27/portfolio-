@@ -20,6 +20,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <div id="scroll-progress"></div>
 
   <!-- NAV -->
   <nav id="navbar">
@@ -79,15 +80,15 @@
         </div>
         <div class="hero-stats">
           <div class="stat">
-            <span class="stat-num">30+</span>
+            <span class="stat-num" data-target="30" data-suffix="+">30+</span>
             <span class="stat-label">Projects</span>
           </div>
           <div class="stat">
-            <span class="stat-num">113</span>
+            <span class="stat-num" data-target="113" data-suffix="">113</span>
             <span class="stat-label">Contributions</span>
           </div>
           <div class="stat">
-            <span class="stat-num">8+</span>
+            <span class="stat-num" data-target="8" data-suffix="+">8+</span>
             <span class="stat-label">Languages</span>
           </div>
         </div>
@@ -102,8 +103,8 @@
   <!-- ABOUT -->
   <section id="about">
     <div class="container">
-      <span class="section-num" aria-hidden="true">01</span>
       <div class="section-header reveal">
+        <span class="section-num" aria-hidden="true">01</span>
         <span class="section-eyebrow">About Me</span>
         <h2 class="section-title">Who I Am</h2>
       </div>
@@ -199,8 +200,8 @@
   <!-- SKILLS -->
   <section id="skills">
     <div class="container">
-      <span class="section-num" aria-hidden="true">02</span>
       <div class="section-header reveal">
+        <span class="section-num" aria-hidden="true">02</span>
         <span class="section-eyebrow">Tech Stack</span>
         <h2 class="section-title">Skills & Technologies</h2>
       </div>
@@ -270,33 +271,33 @@
         <div class="skill-category">
           <h3 class="skill-cat-title">Web & Frameworks</h3>
           <div class="skill-tags">
-            <span class="skill-tag">Node.js</span>
-            <span class="skill-tag">REST APIs</span>
-            <span class="skill-tag">GraphQL</span>
-            <span class="skill-tag">WebSockets</span>
-            <span class="skill-tag">DOM Manipulation</span>
-            <span class="skill-tag">Custom Frameworks</span>
+            <span class="skill-tag node">Node.js</span>
+            <span class="skill-tag api">REST APIs</span>
+            <span class="skill-tag gql">GraphQL</span>
+            <span class="skill-tag ws">WebSockets</span>
+            <span class="skill-tag dom">DOM Manipulation</span>
+            <span class="skill-tag fw">Custom Frameworks</span>
           </div>
         </div>
         <div class="skill-category">
           <h3 class="skill-cat-title">Systems & Security</h3>
           <div class="skill-tags">
-            <span class="skill-tag">Systems Programming</span>
-            <span class="skill-tag">Network Security</span>
-            <span class="skill-tag">Algorithm Design</span>
-            <span class="skill-tag">Concurrency</span>
-            <span class="skill-tag">Memory Safety</span>
-            <span class="skill-tag">Async I/O</span>
+            <span class="skill-tag sys">Systems Programming</span>
+            <span class="skill-tag sec">Network Security</span>
+            <span class="skill-tag algo">Algorithm Design</span>
+            <span class="skill-tag conc">Concurrency</span>
+            <span class="skill-tag mem">Memory Safety</span>
+            <span class="skill-tag async">Async I/O</span>
           </div>
         </div>
         <div class="skill-category">
           <h3 class="skill-cat-title">Tools & Platforms</h3>
           <div class="skill-tags">
-            <span class="skill-tag">Git / GitHub</span>
-            <span class="skill-tag">Linux</span>
-            <span class="skill-tag">SQL / Databases</span>
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag git">Git / GitHub</span>
+            <span class="skill-tag linux">Linux</span>
+            <span class="skill-tag sql">SQL / Databases</span>
+            <span class="skill-tag docker">Docker</span>
+            <span class="skill-tag vsc">VS Code</span>
           </div>
         </div>
       </div>
@@ -306,8 +307,8 @@
   <!-- PROJECTS -->
   <section id="projects">
     <div class="container">
-      <span class="section-num" aria-hidden="true">03</span>
       <div class="section-header reveal">
+        <span class="section-num" aria-hidden="true">03</span>
         <span class="section-eyebrow">My Work</span>
         <h2 class="section-title">Projects</h2>
         <p class="section-sub">All projects from Reboot01 and GitHub — systems, web, security & more.</p>
@@ -1025,8 +1026,8 @@
     <div class="hero-grain"></div>
     <div class="contact-orb"></div>
     <div class="container">
-      <span class="section-num section-num-light" aria-hidden="true">04</span>
       <div class="section-header section-header-dark reveal">
+        <span class="section-num section-num-light" aria-hidden="true">04</span>
         <span class="section-eyebrow">Get In Touch</span>
         <h2 class="section-title">Contact Me</h2>
         <p class="section-sub">Have a project idea, collaboration request, or just want to connect? I'd love to hear from you.</p>
@@ -1130,5 +1131,10 @@
   <script src="js/carousel.js"></script>
   <script src="js/tilt.js"></script>
   <script src="js/form.js"></script>
+  <script src="js/ui.js"></script>
+
+  <button type="button" id="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
 </body>
 </html>

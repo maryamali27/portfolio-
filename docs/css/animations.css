@@ -26,10 +26,14 @@
 .stagger.visible > *:nth-child(2) { opacity:1; transform:none; transition-delay:.1s; }
 .stagger.visible > *:nth-child(3) { opacity:1; transform:none; transition-delay:.16s; }
 .stagger.visible > *:nth-child(4) { opacity:1; transform:none; transition-delay:.22s; }
+.stagger.visible > *:nth-child(5) { opacity:1; transform:none; transition-delay:.28s; }
+.stagger.visible > *:nth-child(6) { opacity:1; transform:none; transition-delay:.34s; }
 
 /* ============================================================
    RESPONSIVE
    ============================================================ */
+
+/* ── Tablet (iPad, small laptop) ── */
 @media (max-width: 1024px) {
   .hero-inner { grid-template-columns: 1fr; gap: 3rem; }
   .hero-right { flex-direction: row; flex-wrap: wrap; justify-content: center; }
@@ -38,23 +42,86 @@
   .about-card { position: static; }
   .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
   .project-card.featured { flex: 0 0 90vw; }
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* ── Large phones (≤768px) ── */
 @media (max-width: 768px) {
-  section { padding: 5rem 0; }
+  .container { padding: 0 1.25rem; }
+  section { padding: 4.5rem 0; }
+
+  /* Nav */
   .nav-links { display: none; }
   .hamburger { display: flex; }
-  .form-row { grid-template-columns: 1fr; }
+
+  /* Hero — center on mobile */
+  .hero-inner { padding: 6rem 1.25rem 4rem; }
+  .hero-left { max-width: 100%; text-align: center; }
+  .hero-available { margin-left: auto; margin-right: auto; }
+  .hero-bio { margin-left: auto; margin-right: auto; }
+  .hero-cta { justify-content: center; }
+  .hero-name { font-size: clamp(2.8rem, 11vw, 4.2rem); }
+  .hero-right { justify-content: center; }
+  .hero-stats { flex-direction: column; width: 100%; max-width: 340px; }
+  .hero-scroll { display: none; }
+
+  /* Section chrome */
+  .section-num { display: none; }
+  .section-header { text-align: center; }
+  .section-eyebrow { margin: 0 auto 1rem; }
+  .section-sub { margin: .75rem auto 0; }
+
+  /* About */
+  .about-text { text-align: center; }
+  .about-links { justify-content: center; }
+
+  /* Skills */
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Projects */
   .project-card { flex: 0 0 82vw; }
   .project-card.featured { flex: 0 0 82vw; }
   .carousel-btn { display: none; }
-  .hero-name { font-size: clamp(3rem, 12vw, 4.5rem); }
-  .hero-stats { flex-direction: column; }
-  .footer-bottom { flex-direction: column; text-align: center; }
-  .footer-top { flex-direction: column; gap: 1.5rem; }
+  .projects-toolbar { gap: .75rem; }
+
+  /* Contact */
+  .form-row { grid-template-columns: 1fr; }
+
+  /* Footer */
+  .footer-top { flex-direction: column; gap: 1.5rem; align-items: center; text-align: center; }
+  .footer-bottom { flex-direction: column; text-align: center; gap: .5rem; }
+  .footer-links { justify-content: center; flex-wrap: wrap; }
 }
+
+/* ── Standard phones (≤480px) ── */
 @media (max-width: 480px) {
-  .hero-inner { padding-top: 6rem; padding-bottom: 4rem; }
-  .hero-avatar-wrap { width: 160px; height: 160px; }
+  .container { padding: 0 1rem; }
+  section { padding: 3.5rem 0; }
+
+  /* Hero */
+  .hero-inner { padding: 5.5rem 1rem 3.5rem; }
+  .hero-name { font-size: clamp(2.2rem, 10vw, 3rem); }
+  .hero-avatar-wrap { width: 140px; height: 140px; }
+  .hero-cta { flex-direction: column; align-items: center; }
+  .hero-cta .btn { width: 100%; max-width: 300px; justify-content: center; }
+  .hero-stats { max-width: 100%; }
+
+  /* Section titles */
+  .section-title { font-size: clamp(1.7rem, 7vw, 2.1rem); }
+
+  /* Skills */
   .skills-grid { grid-template-columns: 1fr; }
-  .section-num { font-size: 4.5rem; }
+  .skill-tags { gap: .35rem; }
+
+  /* About */
+  .about-links { flex-direction: column; align-items: center; }
+  .about-links .about-link { width: 100%; max-width: 280px; justify-content: center; }
+
+  /* Projects */
+  .project-card { flex: 0 0 90vw; }
+  .project-card.featured { flex: 0 0 90vw; }
+
+  /* Contact */
+  .contact-form { padding: 1.25rem; }
+  .contact-info h3 { font-size: 1.2rem; }
 }

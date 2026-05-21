@@ -50,8 +50,8 @@
 }
 .skill-category:hover {
   background: var(--white);
-  border-color: rgba(0,0,0,.1);
-  box-shadow: 0 2px 20px rgba(0,0,0,.06);
+  border-color: rgba(124,58,237,.2);
+  box-shadow: 0 4px 24px rgba(124,58,237,.07), 0 2px 8px rgba(0,0,0,.04);
 }
 
 .skill-cat-title {
@@ -69,6 +69,7 @@
   transition: all .2s; cursor: default;
 }
 .skill-tag:hover { background: var(--violet-soft); color: var(--violet); border-color: #c4b5fd; }
+/* Languages */
 .skill-tag.rust  { background: #fff1ee; color: #c2410c; border-color: #fed7aa; }
 .skill-tag.go    { background: #ecfdf5; color: #065f46; border-color: #6ee7b7; }
 .skill-tag.js    { background: #fefce8; color: #854d0e; border-color: #fde68a; }
@@ -77,3 +78,26 @@
 .skill-tag.php   { background: #faf5ff; color: #7c3aed; border-color: #ddd6fe; }
 .skill-tag.html  { background: #fff7ed; color: #c2410c; border-color: #fed7aa; }
 .skill-tag.css   { background: #f0f9ff; color: #0369a1; border-color: #bae6fd; }
+
+/* Web & Frameworks */
+.skill-tag.node   { background: #ecfdf5; color: #065f46; border-color: #6ee7b7; }
+.skill-tag.api    { background: #eff6ff; color: #1e40af; border-color: #bfdbfe; }
+.skill-tag.gql    { background: #fdf2f8; color: #9d174d; border-color: #f9a8d4; }
+.skill-tag.ws     { background: #fefce8; color: #854d0e; border-color: #fde68a; }
+.skill-tag.dom    { background: #f0f9ff; color: #0369a1; border-color: #bae6fd; }
+.skill-tag.fw     { background: #f5f3ff; color: #5b21b6; border-color: #ddd6fe; }
+
+/* Systems & Security */
+.skill-tag.sys    { background: #f5f3ff; color: #5b21b6; border-color: #ddd6fe; }
+.skill-tag.sec    { background: #fff1f2; color: #be123c; border-color: #fecdd3; }
+.skill-tag.algo   { background: #f8fafc; color: #334155; border-color: #cbd5e1; }
+.skill-tag.conc   { background: #f0fdfa; color: #0f766e; border-color: #99f6e4; }
+.skill-tag.mem    { background: #fff1f2; color: #be123c; border-color: #fecdd3; }
+.skill-tag.async  { background: #faf5ff; color: #7c3aed; border-color: #ddd6fe; }
+
+/* Tools & Platforms */
+.skill-tag.git    { background: #fff7ed; color: #c2410c; border-color: #fed7aa; }
+.skill-tag.linux  { background: #fefce8; color: #854d0e; border-color: #fde68a; }
+.skill-tag.sql    { background: #eff6ff; color: #1e40af; border-color: #bfdbfe; }
+.skill-tag.docker { background: #f0f9ff; color: #0369a1; border-color: #bae6fd; }
+.skill-tag.vsc    { background: #eff6ff; color: #1d4ed8; border-color: #bfdbfe; }

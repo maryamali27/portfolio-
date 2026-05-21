@@ -221,23 +221,6 @@
 .project-card[data-tags~="security"]   { background: #f7f4ff; }
 .project-card[data-tags~="html"]       { background: #fff8f4; }
 
-/* Language circle icon — decorative dot, top-right corner */
-.project-card::before {
-  content: '';
-  position: absolute;
-  top: 1.2rem; right: 1.2rem;
-  width: 34px; height: 34px;
-  border-radius: 50%;
-  background: rgba(0,0,0,.05);
-}
-.project-card[data-tags~="rust"]::before       { background: rgba(194,65,12,.14); }
-.project-card[data-tags~="go"]::before         { background: rgba(5,150,105,.15); }
-.project-card[data-tags~="javascript"]::before { background: rgba(217,119,6,.14); }
-.project-card[data-tags~="typescript"]::before { background: rgba(37,99,235,.12); }
-.project-card[data-tags~="python"]::before     { background: rgba(22,163,74,.14); }
-.project-card[data-tags~="php"]::before        { background: rgba(147,51,234,.12); }
-.project-card[data-tags~="security"]::before   { background: rgba(124,58,237,.14); }
-.project-card[data-tags~="html"]::before       { background: rgba(234,88,12,.14); }
 
 /* Featured card — wider */
 .project-card.featured { flex: 0 0 560px; }
@@ -301,6 +284,16 @@
 }
 .project-link:hover { gap: .5rem; color: var(--violet-2); }
 
+/* Language-tinted hover glows */
+.project-card[data-tags~="rust"]:hover       { box-shadow: 0 0 0 1px rgba(194,65,12,.12), 0 12px 0 -3px rgba(255,255,255,.96), 0 12px 0 -2px rgba(0,0,0,.07), 0 22px 0 -5px rgba(255,255,255,.82), 0 22px 0 -4px rgba(0,0,0,.04), 0 32px 56px rgba(194,65,12,.18); }
+.project-card[data-tags~="go"]:hover         { box-shadow: 0 0 0 1px rgba(5,150,105,.1), 0 12px 0 -3px rgba(255,255,255,.96), 0 12px 0 -2px rgba(0,0,0,.07), 0 22px 0 -5px rgba(255,255,255,.82), 0 22px 0 -4px rgba(0,0,0,.04), 0 32px 56px rgba(5,150,105,.15); }
+.project-card[data-tags~="javascript"]:hover { box-shadow: 0 0 0 1px rgba(217,119,6,.1), 0 12px 0 -3px rgba(255,255,255,.96), 0 12px 0 -2px rgba(0,0,0,.07), 0 22px 0 -5px rgba(255,255,255,.82), 0 22px 0 -4px rgba(0,0,0,.04), 0 32px 56px rgba(217,119,6,.14); }
+.project-card[data-tags~="typescript"]:hover { box-shadow: 0 0 0 1px rgba(37,99,235,.1), 0 12px 0 -3px rgba(255,255,255,.96), 0 12px 0 -2px rgba(0,0,0,.07), 0 22px 0 -5px rgba(255,255,255,.82), 0 22px 0 -4px rgba(0,0,0,.04), 0 32px 56px rgba(37,99,235,.14); }
+.project-card[data-tags~="python"]:hover     { box-shadow: 0 0 0 1px rgba(22,163,74,.1), 0 12px 0 -3px rgba(255,255,255,.96), 0 12px 0 -2px rgba(0,0,0,.07), 0 22px 0 -5px rgba(255,255,255,.82), 0 22px 0 -4px rgba(0,0,0,.04), 0 32px 56px rgba(22,163,74,.15); }
+.project-card[data-tags~="php"]:hover        { box-shadow: 0 0 0 1px rgba(147,51,234,.1), 0 12px 0 -3px rgba(255,255,255,.96), 0 12px 0 -2px rgba(0,0,0,.07), 0 22px 0 -5px rgba(255,255,255,.82), 0 22px 0 -4px rgba(0,0,0,.04), 0 32px 56px rgba(147,51,234,.14); }
+.project-card[data-tags~="security"]:hover   { box-shadow: 0 0 0 1px rgba(124,58,237,.12), 0 12px 0 -3px rgba(255,255,255,.96), 0 12px 0 -2px rgba(0,0,0,.07), 0 22px 0 -5px rgba(255,255,255,.82), 0 22px 0 -4px rgba(0,0,0,.04), 0 32px 56px rgba(124,58,237,.16); }
+.project-card[data-tags~="html"]:hover       { box-shadow: 0 0 0 1px rgba(234,88,12,.1), 0 12px 0 -3px rgba(255,255,255,.96), 0 12px 0 -2px rgba(0,0,0,.07), 0 22px 0 -5px rgba(255,255,255,.82), 0 22px 0 -4px rgba(0,0,0,.04), 0 32px 56px rgba(234,88,12,.14); }
+
 /* ── Senior Project card ── */
 .project-card.senior-project {
   background: linear-gradient(145deg, #fffbf0, #fff5f2);
@@ -311,7 +304,7 @@
     0 16px 0 -6px rgba(255,255,255,.82),
     0 16px 0 -5px rgba(0,0,0,.04);
 }
-.project-card.senior-project::before { background: rgba(245,158,11,.18); }
+
 .project-card.senior-project:hover {
   box-shadow:
     0 0 0 1.5px rgba(245,158,11,.4),
