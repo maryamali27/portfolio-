@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maryam Ali — Cybersecurity & Full Stack Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">MA<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#skills" class="mobile-link">Skills</a>
+    <a href="#projects" class="mobile-link">Projects</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-grain"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-available">
+          <span class="available-dot"></span>
+          Available for opportunities
+        </div>
+        <h1 class="hero-name">Maryam<br>Ali</h1>
+        <p class="hero-role">
+          <span class="typed-text" id="typedText"></span><span class="cursor">|</span>
+        </p>
+        <p class="hero-bio">
+          Building secure systems and full-stack applications.
+          I write Rust for performance, Go &amp; JavaScript for the web,
+          and think in layers — from kernel to UI.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">
+            View My Work
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-outline">Get In Touch</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-avatar-wrap">
+          <div class="hero-avatar">MA</div>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num">30+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">113</span>
+            <span class="stat-label">Contributions</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">8+</span>
+            <span class="stat-label">Languages</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <span class="section-num" aria-hidden="true">01</span>
+      <div class="section-header reveal">
+        <span class="section-eyebrow">About Me</span>
+        <h2 class="section-title">Who I Am</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal-left">
+          <p>
+            I'm a <strong>Cybersecurity & Full Stack Developer</strong> with hands-on experience building
+            everything from low-level systems in <strong>Rust</strong> to dynamic web apps in
+            <strong>JavaScript and TypeScript</strong>. I trained at <strong>Reboot01</strong>,
+            a project-based coding school where I tackled real-world challenges in systems programming,
+            game development, and web architecture.
+          </p>
+          <p>
+            My background spans network security, algorithm design, database management, and UI engineering.
+            I care about writing code that is not only functional but <strong>secure, performant, and maintainable</strong>.
+          </p>
+          <p>
+            When I'm not coding, I'm studying how systems break — and how to make them not.
+          </p>
+          <div class="about-links">
+            <a href="https://github.com/maryamali27" target="_blank" rel="noopener noreferrer" class="about-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub
+            </a>
+            <a href="https://learn.reboot01.com/git/maryamali1" target="_blank" rel="noopener noreferrer" class="about-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.62 0 11.99 0zm4.28 16.28l-4.28-2.55-4.28 2.55 1.13-4.85-3.77-3.27 4.97-.43L12 3.4l1.96 4.33 4.97.43-3.77 3.27 1.11 4.85z"/></svg>
+              Reboot01
+            </a>
+            <a href="mailto:meemeeah64@gmail.com" class="about-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              Email
+            </a>
+          </div>
+        </div>
+        <div class="about-card reveal-right">
+          <div class="about-card-inner">
+            <div class="about-item">
+              <span class="about-icon">🎓</span>
+              <div>
+                <strong>Education</strong>
+                <p>University of Bahrain (UoB)</p>
+                <p>Reboot01 — Project-Based Coding School</p>
+              </div>
+            </div>
+            <div class="about-item">
+              <span class="about-icon">📍</span>
+              <div>
+                <strong>Location</strong>
+                <p>Bahrain</p>
+              </div>
+            </div>
+            <div class="about-item">
+              <span class="about-icon">💼</span>
+              <div>
+                <strong>Focus</strong>
+                <p>Cybersecurity & Full Stack Development</p>
+              </div>
+            </div>
+            <div class="about-item">
+              <span class="about-icon">📅</span>
+              <div>
+                <strong>At Reboot01 Since</strong>
+                <p>February 2024</p>
+              </div>
+            </div>
+            <div class="about-item">
+              <span class="about-icon">⚡</span>
+              <div>
+                <strong>Primary Languages</strong>
+                <p>Rust · Go · JavaScript · TypeScript · Python · PHP</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <span class="section-num" aria-hidden="true">02</span>
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Tech Stack</span>
+        <h2 class="section-title">Skills & Technologies</h2>
+      </div>
+    </div>
+
+    <!-- Marquee ticker -->
+    <div class="marquee-wrap reveal">
+      <div class="marquee-inner">
+        <div class="marquee-track">
+          <span>Rust</span><span class="marquee-dot">·</span>
+          <span>Go</span><span class="marquee-dot">·</span>
+          <span>TypeScript</span><span class="marquee-dot">·</span>
+          <span>JavaScript</span><span class="marquee-dot">·</span>
+          <span>Python</span><span class="marquee-dot">·</span>
+          <span>PHP</span><span class="marquee-dot">·</span>
+          <span>HTML5</span><span class="marquee-dot">·</span>
+          <span>CSS3</span><span class="marquee-dot">·</span>
+          <span>Node.js</span><span class="marquee-dot">·</span>
+          <span>Docker</span><span class="marquee-dot">·</span>
+          <span>Linux</span><span class="marquee-dot">·</span>
+          <span>Git</span><span class="marquee-dot">·</span>
+          <span>WebSockets</span><span class="marquee-dot">·</span>
+          <span>REST APIs</span><span class="marquee-dot">·</span>
+          <span>GraphQL</span><span class="marquee-dot">·</span>
+          <span>SQL</span><span class="marquee-dot">·</span>
+          <span>Network Security</span><span class="marquee-dot">·</span>
+          <span>Systems Programming</span><span class="marquee-dot">·</span>
+        </div>
+        <div class="marquee-track" aria-hidden="true">
+          <span>Rust</span><span class="marquee-dot">·</span>
+          <span>Go</span><span class="marquee-dot">·</span>
+          <span>TypeScript</span><span class="marquee-dot">·</span>
+          <span>JavaScript</span><span class="marquee-dot">·</span>
+          <span>Python</span><span class="marquee-dot">·</span>
+          <span>PHP</span><span class="marquee-dot">·</span>
+          <span>HTML5</span><span class="marquee-dot">·</span>
+          <span>CSS3</span><span class="marquee-dot">·</span>
+          <span>Node.js</span><span class="marquee-dot">·</span>
+          <span>Docker</span><span class="marquee-dot">·</span>
+          <span>Linux</span><span class="marquee-dot">·</span>
+          <span>Git</span><span class="marquee-dot">·</span>
+          <span>WebSockets</span><span class="marquee-dot">·</span>
+          <span>REST APIs</span><span class="marquee-dot">·</span>
+          <span>GraphQL</span><span class="marquee-dot">·</span>
+          <span>SQL</span><span class="marquee-dot">·</span>
+          <span>Network Security</span><span class="marquee-dot">·</span>
+          <span>Systems Programming</span><span class="marquee-dot">·</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="skills-grid stagger">
+        <div class="skill-category">
+          <h3 class="skill-cat-title">Languages</h3>
+          <div class="skill-tags">
+            <span class="skill-tag rust">Rust</span>
+            <span class="skill-tag go">Go</span>
+            <span class="skill-tag js">JavaScript</span>
+            <span class="skill-tag ts">TypeScript</span>
+            <span class="skill-tag py">Python</span>
+            <span class="skill-tag php">PHP</span>
+            <span class="skill-tag html">HTML5</span>
+            <span class="skill-tag css">CSS3</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="skill-cat-title">Web & Frameworks</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">GraphQL</span>
+            <span class="skill-tag">WebSockets</span>
+            <span class="skill-tag">DOM Manipulation</span>
+            <span class="skill-tag">Custom Frameworks</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="skill-cat-title">Systems & Security</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Systems Programming</span>
+            <span class="skill-tag">Network Security</span>
+            <span class="skill-tag">Algorithm Design</span>
+            <span class="skill-tag">Concurrency</span>
+            <span class="skill-tag">Memory Safety</span>
+            <span class="skill-tag">Async I/O</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="skill-cat-title">Tools & Platforms</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Git / GitHub</span>
+            <span class="skill-tag">Linux</span>
+            <span class="skill-tag">SQL / Databases</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">VS Code</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <span class="section-num" aria-hidden="true">03</span>
+      <div class="section-header reveal">
+        <span class="section-eyebrow">My Work</span>
+        <h2 class="section-title">Projects</h2>
+        <p class="section-sub">All projects from Reboot01 and GitHub — systems, web, security & more.</p>
+      </div>
+
+      <!-- Filter -->
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="rust">Rust</button>
+        <button class="filter-btn" data-filter="go">Go</button>
+        <button class="filter-btn" data-filter="javascript">JavaScript</button>
+        <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+        <button class="filter-btn" data-filter="security">Security</button>
+        <button class="filter-btn" data-filter="python">Python</button>
+      </div>
+
+      <!-- Reboot01 Projects -->
+      <div class="projects-label">
+        <span class="platform-badge reboot">Reboot01</span>
+        <span class="projects-count" id="rebootCount"></span>
+      </div>
+      <div class="projects-grid" id="projectsGrid">
+
+        <!-- FEATURED card -->
+        <div class="project-card featured" data-tags="rust systems games">
+          <div class="project-top">
+            <div class="project-langs">
+              <span class="lang-badge rust">Rust</span>
+            </div>
+          </div>
+          <h3 class="project-title">multiplayer-fps</h3>
+          <p class="project-desc">A multiplayer first-person shooter built in Rust with real-time networking, game state synchronization, and a custom rendering engine. One of the most complex projects — handling concurrent player sessions and physics in a memory-safe environment.</p>
+          <div class="project-tags">
+            <span>Game Dev</span><span>Networking</span><span>Systems</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://learn.reboot01.com/git/maryamali1/multiplayer-fps" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+            <span class="project-update">Updated recently</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="rust graphics">
+          <div class="project-top">
+            <div class="project-icon">🔦</div>
+            <div class="project-langs">
+              <span class="lang-badge rust">Rust</span>
+            </div>
+          </div>
+          <h3 class="project-title">rt (Ray Tracer)</h3>
+          <p class="project-desc">A ray tracing engine implemented in Rust from scratch, featuring light simulation, reflections, shadows, and 3D scene rendering with custom materials.</p>
+          <div class="project-tags">
+            <span>Graphics</span><span>Ray Tracing</span><span>Math</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://learn.reboot01.com/git/maryamali1/rt" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+            <span class="project-update">2 months ago</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="rust ai algorithms">
+          <div class="project-top">
+            <div class="project-icon">🧩</div>
+            <div class="project-langs">
+              <span class="lang-badge rust">Rust</span>
+            </div>
+          </div>
+          <h3 class="project-title">filler</h3>
+          <p class="project-desc">A competitive board-filling game with an AI opponent, built in Rust. Implements heuristic algorithms to strategically place pieces and outmaneuver the opponent.</p>
+          <div class="project-tags">
+            <span>AI</span><span>Algorithms</span><span>Game Logic</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://learn.reboot01.com/git/maryamali1/filler" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+            <span class="project-update">2 months ago</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="rust simulation systems">
+          <div class="project-top">
+            <div class="project-icon">🚗</div>
+            <div class="project-langs">
+              <span class="lang-badge rust">Rust</span>
+            </div>
+          </div>
+          <h3 class="project-title">smart-road</h3>
+          <p class="project-desc">A smart traffic intersection simulation in Rust. Vehicles follow traffic rules, avoid collisions, and navigate an intersection using concurrent threads and state machines.</p>
+          <div class="project-tags">
+            <span>Simulation</span><span>Concurrency</span><span>Systems</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://learn.reboot01.com/git/maryamali1/smart-road" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+            <span class="project-update">3 months ago</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="javascript games dom">
+          <div class="project-top">
+            <div class="project-icon">💣</div>
+            <div class="project-langs">
+              <span class="lang-badge js">JavaScript</span>
+            </div>
+          </div>
+          <h3 class="project-title">bomberman-dom</h3>
+          <p class="project-desc">Classic Bomberman game built purely with vanilla JavaScript and DOM manipulation — no canvas, no frameworks. Supports multiplayer via WebSocket and custom game logic.</p>
+          <div class="project-tags">
+            <span>Game Dev</span><span>DOM</span><span>WebSocket</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://learn.reboot01.com/git/maryamali1/bomberman-dom" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+            <span class="project-update">4 months ago</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="rust learning">
+          <div class="project-top">
+            <div class="project-icon">🦀</div>
+            <div class="project-langs">
+              <span class="lang-badge rust">Rust</span>
+            </div>
+          </div>
+          <h3 class="project-title">piscine-rust</h3>
+          <p class="project-desc">Intensive Rust programming exercises from the Reboot01 piscine — covering ownership, borrowing, lifetimes, traits, iterators, error handling and systems concepts.</p>
+          <div class="project-tags">
+            <span>Rust</span><span>Systems</span><span>Learning</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://learn.reboot01.com/git/maryamali1/piscine-rust" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+            <span class="project-update">6 months ago</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="javascript learning">
+          <div class="project-top">
+            <div class="project-icon">📜</div>
+            <div class="project-langs">
+              <span class="lang-badge js">JavaScript</span>
+            </div>
+          </div>
+          <h3 class="project-title">piscine-js</h3>
+          <p class="project-desc">JavaScript piscine exercises covering ES6+, async/await, closures, prototypes, DOM, and functional programming patterns. Archived after completion.</p>
+          <div class="project-tags">
+            <span>JavaScript</span><span>ES6+</span><span>Archived</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://learn.reboot01.com/git/maryamali1/piscine-js" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+            <span class="project-update archived-tag">Archived</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="javascript css framework">
+          <div class="project-top">
+            <div class="project-icon">⚙️</div>
+            <div class="project-langs">
+              <span class="lang-badge css">CSS</span>
+              <span class="lang-badge js">JavaScript</span>
+            </div>
+          </div>
+          <h3 class="project-title">mini-framework</h3>
+          <p class="project-desc">A custom mini front-end framework built from scratch in JavaScript — featuring a virtual DOM, component model, state management, and event binding.</p>
+          <div class="project-tags">
+            <span>Framework</span><span>Virtual DOM</span><span>Architecture</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://learn.reboot01.com/git/maryamali1/mini-framework" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+            <span class="project-update">8 months ago</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="javascript graphql api">
+          <div class="project-top">
+            <div class="project-icon">🔷</div>
+            <div class="project-langs">
+              <span class="lang-badge js">JavaScript</span>
+            </div>
+          </div>
+          <h3 class="project-title">graphql</h3>
+          <p class="project-desc">A GraphQL-powered profile page that queries a school API — fetches and displays personal stats, XP progress, project results, and audit ratio using GraphQL queries and SVG charts.</p>
+          <div class="project-tags">
+            <span>GraphQL</span><span>Data Viz</span><span>API</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://learn.reboot01.com/git/maryamali1/graphql" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="javascript dom">
+          <div class="project-top">
+            <div class="project-icon">📚</div>
+            <div class="project-langs">
+              <span class="lang-badge js">JavaScript</span>
+            </div>
+          </div>
+          <h3 class="project-title">history</h3>
+          <p class="project-desc">A single-page application built with JavaScript that implements custom client-side routing using the History API — manages navigation state without full page reloads.</p>
+          <div class="project-tags">
+            <span>SPA</span><span>Routing</span><span>JavaScript</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://learn.reboot01.com/git/maryamali1/history" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="go algorithms math">
+          <div class="project-top">
+            <div class="project-icon">📐</div>
+            <div class="project-langs">
+              <span class="lang-badge go">Go</span>
+            </div>
+          </div>
+          <h3 class="project-title">math-skills</h3>
+          <p class="project-desc">A Go program that calculates key statistical values — median, average, variance, and standard deviation — from a dataset. Focuses on mathematical precision and clean algorithm implementation.</p>
+          <div class="project-tags">
+            <span>Go</span><span>Math</span><span>Algorithms</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://learn.reboot01.com/git/maryamali1/math-skills" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="typescript fullstack social">
+          <div class="project-top">
+            <div class="project-icon">🌐</div>
+            <div class="project-langs">
+              <span class="lang-badge ts">TypeScript</span>
+            </div>
+          </div>
+          <h3 class="project-title">social-network</h3>
+          <p class="project-desc">A full-featured social networking platform — user profiles, posts, comments, follow system, real-time notifications, and a responsive feed interface. Built with TypeScript for strong type safety.</p>
+          <div class="project-tags">
+            <span>Full Stack</span><span>TypeScript</span><span>Real-time</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://learn.reboot01.com/git/maryamali1/social-network" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="javascript games dom">
+          <div class="project-top">
+            <div class="project-icon">🕹️</div>
+            <div class="project-langs">
+              <span class="lang-badge js">JavaScript</span>
+            </div>
+          </div>
+          <h3 class="project-title">make-your-game</h3>
+          <p class="project-desc">A browser game built with vanilla JavaScript — implements a game loop, collision detection, score tracking, and smooth animations using requestAnimationFrame, no frameworks.</p>
+          <div class="project-tags">
+            <span>Game Dev</span><span>JavaScript</span><span>DOM</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://learn.reboot01.com/git/maryamali1/make-your-game" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+            <span class="project-update archived-tag">Archived</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="go systems networking">
+          <div class="project-top">
+            <div class="project-icon">🐱</div>
+            <div class="project-langs">
+              <span class="lang-badge go">Go</span>
+            </div>
+          </div>
+          <h3 class="project-title">net-cat</h3>
+          <p class="project-desc">A reimplementation of the NetCat networking utility in Go — supports TCP connections, multi-client chat, and message broadcasting across a network.</p>
+          <div class="project-tags">
+            <span>Networking</span><span>Go</span><span>Systems</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://learn.reboot01.com/git/maryamali1/net-cat" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+            <span class="project-update archived-tag">Archived</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="go algorithms systems">
+          <div class="project-top">
+            <div class="project-icon">🐜</div>
+            <div class="project-langs">
+              <span class="lang-badge go">Go</span>
+            </div>
+          </div>
+          <h3 class="project-title">lem-in</h3>
+          <p class="project-desc">An ant colony simulator in Go — finds the shortest paths through a tunnel network and routes ants from start to end with no collisions, using BFS and graph traversal.</p>
+          <div class="project-tags">
+            <span>Algorithms</span><span>Graph Theory</span><span>Go</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://learn.reboot01.com/git/maryamali1/lem-in" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+            <span class="project-update archived-tag">Archived</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="go html api">
+          <div class="project-top">
+            <div class="project-icon">🎵</div>
+            <div class="project-langs">
+              <span class="lang-badge go">Go</span>
+              <span class="lang-badge html">HTML</span>
+            </div>
+          </div>
+          <h3 class="project-title">groupie-tracker</h3>
+          <p class="project-desc">A music artist data aggregation web app — consumes a public REST API, displays band info, concert dates, and locations on a clean responsive interface.</p>
+          <div class="project-tags">
+            <span>REST API</span><span>Go</span><span>Web</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://learn.reboot01.com/git/maryamali1/groupie-tracker" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+            <span class="project-update archived-tag">Archived</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="go html api">
+          <div class="project-top">
+            <div class="project-icon">📈</div>
+            <div class="project-langs">
+              <span class="lang-badge go">Go</span>
+              <span class="lang-badge html">HTML</span>
+            </div>
+          </div>
+          <h3 class="project-title">groupie-tracker-visualizations</h3>
+          <p class="project-desc">Extended groupie-tracker with interactive data visualizations — adds charts, maps, and dynamic filtering for music artist concert and location data.</p>
+          <div class="project-tags">
+            <span>Visualization</span><span>Go</span><span>API</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://learn.reboot01.com/git/maryamali1/groupie-tracker-visualizations" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+            <span class="project-update archived-tag">Archived</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="go html fullstack">
+          <div class="project-top">
+            <div class="project-icon">💬</div>
+            <div class="project-langs">
+              <span class="lang-badge go">Go</span>
+              <span class="lang-badge html">HTML</span>
+            </div>
+          </div>
+          <h3 class="project-title">forum</h3>
+          <p class="project-desc">A full-featured web forum built with Go and HTML — supports user registration, threaded posts, categories, comments, likes/dislikes, and session-based authentication.</p>
+          <div class="project-tags">
+            <span>Full Stack</span><span>Go</span><span>Web</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://learn.reboot01.com/git/maryamali1/forum" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+            <span class="project-update archived-tag">Archived</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="go ascii">
+          <div class="project-top">
+            <div class="project-icon">🔡</div>
+            <div class="project-langs">
+              <span class="lang-badge go">Go</span>
+            </div>
+          </div>
+          <h3 class="project-title">ascii-art</h3>
+          <p class="project-desc">A Go program that converts any string into ASCII art using custom banner fonts — supports multiple stylized outputs (shadow, standard, thinkertoy) via the terminal.</p>
+          <div class="project-tags">
+            <span>Go</span><span>CLI</span><span>Text Processing</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://learn.reboot01.com/git/maryamali1/ascii-art" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+            <span class="project-update archived-tag">Archived</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="go html fullstack">
+          <div class="project-top">
+            <div class="project-icon">🖥️</div>
+            <div class="project-langs">
+              <span class="lang-badge go">Go</span>
+              <span class="lang-badge html">HTML</span>
+            </div>
+          </div>
+          <h3 class="project-title">ascii-art-web</h3>
+          <p class="project-desc">A web interface for the ASCII art generator — built with Go's net/http and HTML templates, letting users type text and choose a banner style through the browser.</p>
+          <div class="project-tags">
+            <span>Go</span><span>Web</span><span>Full Stack</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://learn.reboot01.com/git/maryamali1/ascii-art-web" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+            <span class="project-update archived-tag">Archived</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="go docker systems">
+          <div class="project-top">
+            <div class="project-icon">🐳</div>
+            <div class="project-langs">
+              <span class="lang-badge go">Go</span>
+            </div>
+          </div>
+          <h3 class="project-title">ascii-art-dockerize</h3>
+          <p class="project-desc">The ASCII art web app containerized with Docker — includes a Dockerfile and docker-compose setup for portable, reproducible deployments across any environment.</p>
+          <div class="project-tags">
+            <span>Docker</span><span>Go</span><span>DevOps</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://learn.reboot01.com/git/maryamali1/ascii-art-dockerize" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+            <span class="project-update archived-tag">Archived</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="go text">
+          <div class="project-top">
+            <div class="project-icon">📝</div>
+            <div class="project-langs">
+              <span class="lang-badge go">Go</span>
+            </div>
+          </div>
+          <h3 class="project-title">go-reloaded</h3>
+          <p class="project-desc">A Go text manipulation tool — converts case, handles hex/binary/octal numbers, and fixes punctuation spacing via custom find-and-replace rules.</p>
+          <div class="project-tags">
+            <span>Go</span><span>Text Processing</span><span>CLI</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://learn.reboot01.com/git/maryamali1/go-reloaded" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+            <span class="project-update archived-tag">Archived</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="go learning">
+          <div class="project-top">
+            <div class="project-icon">🏊</div>
+            <div class="project-langs">
+              <span class="lang-badge go">Go</span>
+            </div>
+          </div>
+          <h3 class="project-title">bh-piscine</h3>
+          <p class="project-desc">Go programming bootcamp exercises from Reboot01 — covers goroutines, channels, interfaces, data structures, and standard library usage.</p>
+          <div class="project-tags">
+            <span>Go</span><span>Learning</span><span>Bootcamp</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://learn.reboot01.com/git/maryamali1/bh-piscine" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+            <span class="project-update archived-tag">Archived</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Collaborative Projects -->
+      <div class="projects-label projects-label-gap">
+        <span class="platform-badge collab">Collaborative</span>
+        <span class="projects-count">Reboot01 — verified by commit history</span>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card" data-tags="go javascript fullstack">
+          <div class="project-top">
+            <div class="project-icon">⚡</div>
+            <div class="project-langs">
+              <span class="lang-badge go">Go</span>
+              <span class="lang-badge js">JavaScript</span>
+            </div>
+          </div>
+          <h3 class="project-title">real-time-forum</h3>
+          <p class="project-desc">A full-stack real-time forum built collaboratively — features WebSocket-powered live messaging, threaded posts, user authentication, and instant notifications. Go backend with vanilla JS frontend.</p>
+          <div class="project-tags">
+            <span>WebSocket</span><span>Real-time</span><span>Full Stack</span><span>Team</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://learn.reboot01.com/git/aaldaka/real-time-forum" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="rust systems networking">
+          <div class="project-top">
+            <div class="project-icon">🔌</div>
+            <div class="project-langs">
+              <span class="lang-badge rust">Rust</span>
+            </div>
+          </div>
+          <h3 class="project-title">localhost</h3>
+          <p class="project-desc">A custom HTTP/1.1 server built from scratch in Rust — handles routing, CGI execution, file uploads, session management, and concurrent connections using an epoll-based async I/O model.</p>
+          <div class="project-tags">
+            <span>Rust</span><span>HTTP Server</span><span>CGI</span><span>Team</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://learn.reboot01.com/git/aaldaka/localhost" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- GitHub Projects -->
+      <div class="projects-label projects-label-gap">
+        <span class="platform-badge github">GitHub</span>
+        <span class="projects-count" id="githubCount"></span>
+      </div>
+      <div class="projects-grid" id="githubGrid">
+
+        <div class="project-card" data-tags="javascript fullstack">
+          <div class="project-top">
+            <div class="project-icon">💳</div>
+            <div class="project-langs">
+              <span class="lang-badge js">JavaScript</span>
+            </div>
+          </div>
+          <h3 class="project-title">transaction-management-fullstack-level-1</h3>
+          <p class="project-desc">Full-stack transaction management application — Level 1. Handles financial records, CRUD operations, and data persistence with a clean UI and REST API backend.</p>
+          <div class="project-tags">
+            <span>Full Stack</span><span>Finance</span><span>REST API</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/maryamali27/transaction-management-fullstack-level-1" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+            <span class="project-update">⭐ 1</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="typescript fullstack">
+          <div class="project-top">
+            <div class="project-icon">📊</div>
+            <div class="project-langs">
+              <span class="lang-badge ts">TypeScript</span>
+            </div>
+          </div>
+          <h3 class="project-title">transaction-management-fullstack-level-2</h3>
+          <p class="project-desc">Advanced full-stack transaction management — Level 2. Rebuilt in TypeScript with stronger type safety, improved architecture, and enhanced features over Level 1.</p>
+          <div class="project-tags">
+            <span>Full Stack</span><span>TypeScript</span><span>Architecture</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/maryamali27/transaction-management-fullstack-level-2" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+            <span class="project-update">⭐ 1</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="security networking">
+          <div class="project-top">
+            <div class="project-icon">🔭</div>
+            <div class="project-langs">
+              <span class="lang-badge">Multi</span>
+            </div>
+          </div>
+          <h3 class="project-title">OpticNet</h3>
+          <p class="project-desc">A network monitoring and analysis tool — inspects network traffic, identifies anomalies, and provides visibility into connection patterns for security analysis.</p>
+          <div class="project-tags">
+            <span>Networking</span><span>Security</span><span>Monitoring</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/maryamali27/OpticNet" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="security tools">
+          <div class="project-top">
+            <div class="project-icon">🔐</div>
+            <div class="project-langs">
+              <span class="lang-badge">Multi</span>
+            </div>
+          </div>
+          <h3 class="project-title">Integrity-Checker</h3>
+          <p class="project-desc">A file integrity verification tool that uses cryptographic hashing to detect unauthorized modifications — useful for system auditing and intrusion detection.</p>
+          <div class="project-tags">
+            <span>Security</span><span>Hashing</span><span>Auditing</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/maryamali27/Integrity-Checker-" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="python data api">
+          <div class="project-top">
+            <div class="project-icon">🚀</div>
+            <div class="project-langs">
+              <span class="lang-badge py">Python</span>
+            </div>
+          </div>
+          <h3 class="project-title">test_nasa</h3>
+          <p class="project-desc">A Python project integrating with NASA's public APIs to fetch and display space data — including asteroid tracking, APOD (Astronomy Picture of the Day), and more.</p>
+          <div class="project-tags">
+            <span>Python</span><span>API</span><span>Data</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/maryamali27/test_nasa" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="security collaboration">
+          <div class="project-top">
+            <div class="project-icon">👁️</div>
+            <div class="project-langs">
+              <span class="lang-badge">Multi</span>
+            </div>
+          </div>
+          <h3 class="project-title">HyperVision</h3>
+          <p class="project-desc">A collaborative security/visualization project — provides enhanced visibility into system processes or network behavior with a monitoring dashboard.</p>
+          <div class="project-tags">
+            <span>Security</span><span>Visualization</span><span>Collaboration</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/xmctq/HyperVision" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="python academic">
+          <div class="project-top">
+            <div class="project-icon">📡</div>
+            <div class="project-langs">
+              <span class="lang-badge py">Python</span>
+            </div>
+          </div>
+          <h3 class="project-title">assigment1-ne352</h3>
+          <p class="project-desc">Assignment for NE352 (Network Engineering) — covers network protocols, packet analysis, or simulation concepts as part of university coursework.</p>
+          <div class="project-tags">
+            <span>Networking</span><span>Academic</span><span>Python</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/maryamali27/assigment1-ne352" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="html web academic">
+          <div class="project-top">
+            <div class="project-icon">🏃</div>
+            <div class="project-langs">
+              <span class="lang-badge html">HTML</span>
+            </div>
+          </div>
+          <h3 class="project-title">PACE1</h3>
+          <p class="project-desc">A web project focused on event/activity tracking and management — forked and extended with additional features for university coursework.</p>
+          <div class="project-tags">
+            <span>Web</span><span>Academic</span><span>HTML/CSS</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/maryamali27/PACE1" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="php web academic">
+          <div class="project-top">
+            <div class="project-icon">🗄️</div>
+            <div class="project-langs">
+              <span class="lang-badge php">PHP</span>
+            </div>
+          </div>
+          <h3 class="project-title">CS333-A2</h3>
+          <p class="project-desc">A PHP web application for CS333 — includes server-side rendering, form handling, MySQL database integration, and session management.</p>
+          <div class="project-tags">
+            <span>PHP</span><span>MySQL</span><span>Academic</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/maryamali27/CS333-A2" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="html web academic">
+          <div class="project-top">
+            <div class="project-icon">🖥️</div>
+            <div class="project-langs">
+              <span class="lang-badge html">HTML</span>
+            </div>
+          </div>
+          <h3 class="project-title">ITCS333-A3</h3>
+          <p class="project-desc">A web application assignment for ITCS333 — covers front-end development fundamentals, responsive design, and interactive UI components.</p>
+          <div class="project-tags">
+            <span>Web Dev</span><span>Responsive</span><span>Academic</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/maryamali27/ITCS333-A3" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="javascript fullstack">
+          <div class="project-top">
+            <div class="project-icon">🏦</div>
+            <div class="project-langs">
+              <span class="lang-badge js">JavaScript</span>
+            </div>
+          </div>
+          <h3 class="project-title">transaction-management-backend-level-1</h3>
+          <p class="project-desc">Backend service for the transaction management system — REST API layer handling data persistence, business logic, and authentication for the Level 1 full-stack app.</p>
+          <div class="project-tags">
+            <span>Backend</span><span>REST API</span><span>JavaScript</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/maryamali27/transaction-management-backend-level-1" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="python api data">
+          <div class="project-top">
+            <div class="project-icon">🌌</div>
+            <div class="project-langs">
+              <span class="lang-badge py">Python</span>
+            </div>
+          </div>
+          <h3 class="project-title">nasa_challenge</h3>
+          <p class="project-desc">A NASA API challenge project — fetches and presents space data including asteroid tracking, APOD (Astronomy Picture of the Day), and Mars rover imagery from NASA's open APIs.</p>
+          <div class="project-tags">
+            <span>Python</span><span>NASA API</span><span>Data</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/maryamali27/nasa_challenge" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="hero-grain"></div>
+    <div class="contact-orb"></div>
+    <div class="container">
+      <span class="section-num section-num-light" aria-hidden="true">04</span>
+      <div class="section-header section-header-dark reveal">
+        <span class="section-eyebrow">Get In Touch</span>
+        <h2 class="section-title">Contact Me</h2>
+        <p class="section-sub">Have a project idea, collaboration request, or just want to connect? I'd love to hear from you.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <h3>Let's Connect</h3>
+          <p>I'm open to internships, collaborations, and interesting projects — especially in cybersecurity, systems programming, and full-stack development.</p>
+          <div class="contact-links">
+            <a href="mailto:meemeeah64@gmail.com" class="contact-card">
+              <div class="contact-card-icon email-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              </div>
+              <div>
+                <strong>Email</strong>
+                <span>meemeeah64@gmail.com</span>
+              </div>
+            </a>
+            <a href="https://github.com/maryamali27" target="_blank" rel="noopener noreferrer" class="contact-card">
+              <div class="contact-card-icon github-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </div>
+              <div>
+                <strong>GitHub</strong>
+                <span>github.com/maryamali27</span>
+              </div>
+            </a>
+            <a href="https://learn.reboot01.com/git/maryamali1" target="_blank" rel="noopener noreferrer" class="contact-card">
+              <div class="contact-card-icon reboot-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+              </div>
+              <div>
+                <strong>Reboot01</strong>
+                <span>maryamali1</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <form class="contact-form reveal-right" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Project idea, collaboration, etc." required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or idea..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <span id="btnText">Send Message</span>
+            <svg id="btnIcon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+          </button>
+          <p class="form-note" id="formNote"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <a href="#hero" class="footer-logo">MA<span>.</span></a>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="https://github.com/maryamali27" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://learn.reboot01.com/git/maryamali1" target="_blank" rel="noopener noreferrer">Reboot01</a>
+          <a href="mailto:meemeeah64@gmail.com">Email</a>
+        </nav>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2025 Maryam Ali — Cybersecurity &amp; Full Stack Developer</p>
+        <p class="footer-built">Built with HTML, CSS &amp; JavaScript</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
