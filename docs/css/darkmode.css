@@ -17,7 +17,7 @@
   --shadow-lg:  0 20px 60px rgba(0,0,0,.6), 0 4px 16px rgba(0,0,0,.4);
   --shadow-violet: 0 8px 32px rgba(124,58,237,.4);
   --violet-soft: rgba(124,58,237,.18);
-  color-scheme: dark;
+  color-scheme: only dark;
 }
 
 [data-theme="dark"] body { background: #09090b; }
