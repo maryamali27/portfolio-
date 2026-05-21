@@ -79,25 +79,40 @@ document.querySelectorAll('.mobile-link').forEach(link => {
   });
 });
 
-// Project filter
+// Project filter + search (combined)
 const filterBtns = document.querySelectorAll('.filter-btn');
 const allCards = document.querySelectorAll('.project-card');
+const searchInput = document.getElementById('projectSearch');
+const searchClear = document.getElementById('searchClear');
+
+function applyFilters() {
+  const query = (searchInput.value || '').toLowerCase().trim();
+  const activeFilter = document.querySelector('.filter-btn.active').dataset.filter;
+  searchInput.parentElement.classList.toggle('has-value', query.length > 0);
+  allCards.forEach(card => {
+    const title = (card.querySelector('.project-title')?.textContent || '').toLowerCase();
+    const desc  = (card.querySelector('.project-desc')?.textContent  || '').toLowerCase();
+    const tags  = card.dataset.tags || '';
+    const matchesSearch = !query || title.includes(query) || desc.includes(query) || tags.includes(query);
+    const matchesFilter = activeFilter === 'all' || tags.includes(activeFilter);
+    card.classList.toggle('hidden', !(matchesSearch && matchesFilter));
+  });
+  updateProjectCounts();
+}
 
 filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     filterBtns.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    const filter = btn.dataset.filter;
-    allCards.forEach(card => {
-      const tags = card.dataset.tags || '';
-      if (filter === 'all' || tags.includes(filter)) {
-        card.classList.remove('hidden');
-      } else {
-        card.classList.add('hidden');
-      }
-    });
-    updateProjectCounts();
+    applyFilters();
   });
+});
+
+searchInput.addEventListener('input', applyFilters);
+searchClear.addEventListener('click', () => {
+  searchInput.value = '';
+  applyFilters();
+  searchInput.focus();
 });
 
 function updateProjectCounts() {
@@ -227,30 +242,50 @@ document.querySelectorAll('.project-card').forEach(card => {
   });
 });
 
-// Contact form — opens default email client
+// Contact form — sends directly via formsubmit.co (no email client opens)
+// First submission: formsubmit.co will email you a one-time confirmation link — click it to activate.
 const form = document.getElementById('contactForm');
 const formNote = document.getElementById('formNote');
 const btnText = document.getElementById('btnText');
-const btnIcon = document.getElementById('btnIcon');
+const submitBtn = form.querySelector('button[type="submit"]');
 
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', async (e) => {
   e.preventDefault();
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
+  const name    = document.getElementById('name').value.trim();
+  const email   = document.getElementById('email').value.trim();
   const subject = document.getElementById('subject').value.trim();
   const message = document.getElementById('message').value.trim();
 
-  const body = `Hi Maryam,\n\nMy name is ${name} (${email}).\n\n${message}`;
-  const mailto = `mailto:meemeeah64@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  window.location.href = mailto;
+  btnText.textContent = 'Sending…';
+  submitBtn.disabled = true;
+  formNote.textContent = '';
+  formNote.className = 'form-note';
 
-  btnText.textContent = 'Opening email client...';
-  formNote.textContent = 'Your email client should open. If not, email meemeeah64@gmail.com directly.';
-  formNote.className = 'form-note success';
-
-  setTimeout(() => {
+  try {
+    const res = await fetch('https://formsubmit.co/ajax/m3ryamali27@gmail.com', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({ name, email, _subject: `Portfolio: ${subject}`, message, _captcha: 'false' })
+    });
+    const result = await res.json();
+    if (result.success === 'true' || result.success === true) {
+      btnText.textContent = 'Sent ✓';
+      formNote.textContent = "Thanks! I'll get back to you soon.";
+      formNote.className = 'form-note success';
+      form.reset();
+      setTimeout(() => {
+        btnText.textContent = 'Send Message';
+        formNote.textContent = '';
+        formNote.className = 'form-note';
+        submitBtn.disabled = false;
+      }, 4000);
+    } else {
+      throw new Error('Submission failed');
+    }
+  } catch {
     btnText.textContent = 'Send Message';
-    formNote.textContent = '';
-    form.reset();
-  }, 4000);
+    formNote.textContent = 'Could not send — email me directly: m3ryamali27@gmail.com';
+    formNote.className = 'form-note error';
+    submitBtn.disabled = false;
+  }
 });

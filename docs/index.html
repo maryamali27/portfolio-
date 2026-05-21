@@ -122,16 +122,22 @@
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.62 0 11.99 0zm4.28 16.28l-4.28-2.55-4.28 2.55 1.13-4.85-3.77-3.27 4.97-.43L12 3.4l1.96 4.33 4.97.43-3.77 3.27 1.11 4.85z"/></svg>
               Reboot01
             </a>
-            <a href="mailto:meemeeah64@gmail.com" class="about-link">
+            <a href="mailto:m3ryamali27@gmail.com" class="about-link">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
               Email
+            </a>
+            <a href="https://www.linkedin.com/in/maryam-ali-a84b431ab" target="_blank" rel="noopener noreferrer" class="about-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
             </a>
           </div>
         </div>
         <div class="about-card reveal-right">
           <div class="about-card-inner">
             <div class="about-item">
-              <span class="about-icon">🎓</span>
+              <span class="about-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              </span>
               <div>
                 <strong>Education</strong>
                 <p>University of Bahrain (UoB)</p>
@@ -139,28 +145,36 @@
               </div>
             </div>
             <div class="about-item">
-              <span class="about-icon">📍</span>
+              <span class="about-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
               <div>
                 <strong>Location</strong>
                 <p>Bahrain</p>
               </div>
             </div>
             <div class="about-item">
-              <span class="about-icon">💼</span>
+              <span class="about-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+              </span>
               <div>
                 <strong>Focus</strong>
                 <p>Cybersecurity & Full Stack Development</p>
               </div>
             </div>
             <div class="about-item">
-              <span class="about-icon">📅</span>
+              <span class="about-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </span>
               <div>
                 <strong>At Reboot01 Since</strong>
                 <p>February 2024</p>
               </div>
             </div>
             <div class="about-item">
-              <span class="about-icon">⚡</span>
+              <span class="about-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </span>
               <div>
                 <strong>Primary Languages</strong>
                 <p>Rust · Go · JavaScript · TypeScript · Python · PHP</p>
@@ -289,15 +303,25 @@
         <p class="section-sub">All projects from Reboot01 and GitHub — systems, web, security & more.</p>
       </div>
 
-      <!-- Filter -->
-      <div class="filter-bar reveal">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="rust">Rust</button>
-        <button class="filter-btn" data-filter="go">Go</button>
-        <button class="filter-btn" data-filter="javascript">JavaScript</button>
-        <button class="filter-btn" data-filter="fullstack">Full Stack</button>
-        <button class="filter-btn" data-filter="security">Security</button>
-        <button class="filter-btn" data-filter="python">Python</button>
+      <!-- Search + Filter toolbar -->
+      <div class="projects-toolbar reveal">
+        <div class="search-bar">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="projectSearch" placeholder="Search projects…" autocomplete="off" spellcheck="false" />
+          <button type="button" class="search-clear" id="searchClear" aria-label="Clear search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+        <div class="filter-bar">
+          <button type="button" class="filter-btn active" data-filter="all">All</button>
+          <button type="button" class="filter-btn" data-filter="rust">Rust</button>
+          <button type="button" class="filter-btn" data-filter="go">Go</button>
+          <button type="button" class="filter-btn" data-filter="javascript">JavaScript</button>
+          <button type="button" class="filter-btn" data-filter="typescript">TypeScript</button>
+          <button type="button" class="filter-btn" data-filter="fullstack">Full Stack</button>
+          <button type="button" class="filter-btn" data-filter="security">Security</button>
+          <button type="button" class="filter-btn" data-filter="python">Python</button>
+        </div>
       </div>
 
       <!-- Reboot01 Projects -->
@@ -811,20 +835,21 @@
           </div>
         </div>
 
-        <div class="project-card" data-tags="security networking">
+        <div class="project-card senior-project" data-tags="security networking">
           <div class="project-top">
-            <div class="project-icon">🔭</div>
             <div class="project-langs">
               <span class="lang-badge">Multi</span>
             </div>
           </div>
+          <span class="senior-badge">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            Senior Project
+          </span>
           <h3 class="project-title">OpticNet</h3>
-          <p class="project-desc">A network monitoring and analysis tool — inspects network traffic, identifies anomalies, and provides visibility into connection patterns for security analysis.</p>
-          <div class="project-tags">
-            <span>Networking</span><span>Security</span><span>Monitoring</span>
-          </div>
+          <p class="project-desc">A full-stack network monitoring and analysis platform — inspects network traffic, identifies anomalies, and provides real-time visibility into connection patterns for security analysis.</p>
           <div class="project-footer">
-            <a href="https://github.com/maryamali27/OpticNet" target="_blank" rel="noopener noreferrer" class="project-link">View Repo →</a>
+            <a href="https://opticnet.online/" target="_blank" rel="noopener noreferrer" class="project-link project-link-live">Live Site →</a>
+            <a href="https://github.com/maryamali27/OpticNet" target="_blank" rel="noopener noreferrer" class="project-link project-link-repo">Repo</a>
           </div>
         </div>
 
@@ -1001,13 +1026,13 @@
           <h3>Let's Connect</h3>
           <p>I'm open to internships, collaborations, and interesting projects — especially in cybersecurity, systems programming, and full-stack development.</p>
           <div class="contact-links">
-            <a href="mailto:meemeeah64@gmail.com" class="contact-card">
+            <a href="mailto:m3ryamali27@gmail.com" class="contact-card">
               <div class="contact-card-icon email-icon">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
               </div>
               <div>
                 <strong>Email</strong>
-                <span>meemeeah64@gmail.com</span>
+                <span>m3ryamali27@gmail.com</span>
               </div>
             </a>
             <a href="https://github.com/maryamali27" target="_blank" rel="noopener noreferrer" class="contact-card">
@@ -1026,6 +1051,15 @@
               <div>
                 <strong>Reboot01</strong>
                 <span>maryamali1</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/maryam-ali-a84b431ab" target="_blank" rel="noopener noreferrer" class="contact-card">
+              <div class="contact-card-icon linkedin-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </div>
+              <div>
+                <strong>LinkedIn</strong>
+                <span>linkedin.com/in/maryam-ali</span>
               </div>
             </a>
           </div>
@@ -1066,14 +1100,14 @@
         <a href="#hero" class="footer-logo">MA<span>.</span></a>
         <nav class="footer-links" aria-label="Footer navigation">
           <a href="https://github.com/maryamali27" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/maryam-ali-a84b431ab" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="https://learn.reboot01.com/git/maryamali1" target="_blank" rel="noopener noreferrer">Reboot01</a>
-          <a href="mailto:meemeeah64@gmail.com">Email</a>
+          <a href="mailto:m3ryamali27@gmail.com">Email</a>
         </nav>
       </div>
       <div class="footer-divider"></div>
       <div class="footer-bottom">
-        <p class="footer-copy">© 2025 Maryam Ali — Cybersecurity &amp; Full Stack Developer</p>
-        <p class="footer-built">Built with HTML, CSS &amp; JavaScript</p>
+        <p class="footer-copy">© 2026 Maryam Ali — Cybersecurity &amp; Full Stack Developer</p>
       </div>
     </div>
   </footer>
