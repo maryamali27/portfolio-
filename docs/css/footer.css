@@ -1,0 +1,32 @@
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+  background: var(--dark-2);
+  border-top: 1px solid var(--dark-border);
+}
+.footer-inner {
+  max-width: 1200px; margin: 0 auto; padding: 0 2rem;
+}
+.footer-top {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 2.25rem 0;
+}
+.footer-logo {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.25rem; font-weight: 800; letter-spacing: -.05em;
+  color: var(--white);
+}
+.footer-logo span { color: var(--violet-glow); }
+.footer-links { display: flex; gap: 2rem; }
+.footer-links a {
+  font-size: .82rem; color: rgba(255,255,255,.3);
+  transition: color .2s; font-weight: 500;
+}
+.footer-links a:hover { color: var(--violet-glow); }
+.footer-divider { height: 1px; background: var(--dark-border); }
+.footer-bottom {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.5rem 0; gap: 1rem;
+}
+.footer-copy, .footer-built { font-size: .75rem; color: rgba(255,255,255,.2); }

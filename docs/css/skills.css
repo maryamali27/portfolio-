@@ -1,0 +1,79 @@
+/* ============================================================
+   SKILLS — WHITE WITH MARQUEE
+   ============================================================ */
+#skills { background: var(--white); padding-bottom: 7rem; }
+#skills .container:first-child { padding-bottom: 0; }
+
+/* Marquee ticker */
+.marquee-wrap {
+  overflow: hidden;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 1.1rem 0;
+  margin-bottom: 4rem;
+  background: var(--light);
+}
+.marquee-inner {
+  display: flex;
+  width: max-content;
+}
+.marquee-track {
+  display: flex; align-items: center; gap: 1.5rem;
+  flex-shrink: 0; padding-right: 1.5rem;
+  animation: marquee-scroll 28s linear infinite;
+}
+.marquee-wrap:hover .marquee-track { animation-play-state: paused; }
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+.marquee-track span {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .78rem; font-weight: 500;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.marquee-dot {
+  color: var(--violet-glow) !important;
+  font-size: .6rem !important;
+}
+
+.skills-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  gap: 1.25rem;
+}
+.skill-category {
+  background: transparent; border: 1px solid rgba(0,0,0,.07);
+  border-radius: var(--radius); padding: 1.75rem;
+  transition: background .2s ease, border-color .2s ease, box-shadow .2s ease;
+  position: relative;
+}
+.skill-category:hover {
+  background: var(--white);
+  border-color: rgba(0,0,0,.1);
+  box-shadow: 0 2px 20px rgba(0,0,0,.06);
+}
+
+.skill-cat-title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: .68rem; font-weight: 700;
+  letter-spacing: .15em; text-transform: uppercase;
+  color: var(--violet); margin-bottom: 1.25rem;
+}
+.skill-tags { display: flex; flex-wrap: wrap; gap: .45rem; }
+.skill-tag {
+  padding: .28rem .75rem; border-radius: 50px;
+  font-size: .77rem; font-weight: 500;
+  background: var(--white); color: var(--text);
+  border: 1px solid var(--border);
+  transition: all .2s; cursor: default;
+}
+.skill-tag:hover { background: var(--violet-soft); color: var(--violet); border-color: #c4b5fd; }
+.skill-tag.rust  { background: #fff1ee; color: #c2410c; border-color: #fed7aa; }
+.skill-tag.go    { background: #ecfdf5; color: #065f46; border-color: #6ee7b7; }
+.skill-tag.js    { background: #fefce8; color: #854d0e; border-color: #fde68a; }
+.skill-tag.ts    { background: #eff6ff; color: #1d4ed8; border-color: #bfdbfe; }
+.skill-tag.py    { background: #f0fdf4; color: #15803d; border-color: #bbf7d0; }
+.skill-tag.php   { background: #faf5ff; color: #7c3aed; border-color: #ddd6fe; }
+.skill-tag.html  { background: #fff7ed; color: #c2410c; border-color: #fed7aa; }
+.skill-tag.css   { background: #f0f9ff; color: #0369a1; border-color: #bae6fd; }

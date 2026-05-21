@@ -1,0 +1,60 @@
+/* ============================================================
+   ABOUT — LIGHT
+   ============================================================ */
+#about { background: var(--light); }
+
+.about-grid {
+  display: grid; grid-template-columns: 1.1fr 1fr;
+  gap: 5rem; align-items: start;
+}
+.about-text p {
+  color: var(--text-muted); margin-bottom: 1.5rem;
+  font-size: 1rem; line-height: 1.85;
+}
+.about-text strong { color: var(--text); font-weight: 600; }
+
+.about-links { display: flex; flex-wrap: wrap; gap: .625rem; margin-top: 2.25rem; }
+.about-link {
+  display: inline-flex; align-items: center; gap: .45rem;
+  padding: .5rem 1rem;
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: 50px; font-size: .82rem; font-weight: 500;
+  color: var(--text-muted); transition: all .2s;
+  box-shadow: var(--shadow-sm);
+}
+.about-link svg { width: 14px; height: 14px; flex-shrink: 0; }
+.about-link:hover {
+  border-color: var(--violet); color: var(--violet);
+  box-shadow: 0 4px 12px rgba(124,58,237,.1);
+  transform: translateY(-2px);
+}
+
+.about-card {
+  background: var(--white); border: 1px solid rgba(0,0,0,.07);
+  border-radius: var(--radius-lg); padding: 1.75rem;
+  position: sticky; top: 96px;
+}
+.about-card-inner { display: flex; flex-direction: column; }
+.about-item {
+  display: flex; align-items: flex-start; gap: .875rem;
+  padding: .875rem 0; border-bottom: 1px solid var(--border);
+}
+.about-item:last-child { border-bottom: none; padding-bottom: 0; }
+.about-item:first-child { padding-top: 0; }
+.about-icon {
+  width: 34px; height: 34px; border-radius: 8px;
+  background: var(--violet-soft);
+  color: var(--violet);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.about-icon svg { width: 15px; height: 15px; flex-shrink: 0; }
+.about-item:nth-child(2) .about-icon { background: #ecfdf5; color: #059669; }
+.about-item:nth-child(3) .about-icon { background: #fff7ed; color: #c2410c; }
+.about-item:nth-child(4) .about-icon { background: #eff6ff; color: #1d4ed8; }
+.about-item:nth-child(5) .about-icon { background: #fefce8; color: #b45309; }
+.about-item strong {
+  display: block; font-size: .8rem; font-weight: 600;
+  color: var(--text); margin-bottom: .2rem;
+}
+.about-item p { color: var(--text-muted); font-size: .8rem; line-height: 1.5; }
