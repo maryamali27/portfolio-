@@ -55,6 +55,39 @@
   display: flex; align-items: center; gap: .625rem;
 }
 
+/* ── Theme toggle button ── */
+#theme-toggle {
+  width: 38px; height: 38px; border-radius: 50%;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,.2);
+  color: rgba(255,255,255,.65);
+  cursor: pointer; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  transition: background .2s, border-color .2s, color .2s, transform .2s;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+#theme-toggle svg { width: 16px; height: 16px; flex-shrink: 0; pointer-events: none; }
+#theme-toggle:hover {
+  background: rgba(255,255,255,.1);
+  border-color: rgba(255,255,255,.4);
+  color: #fff;
+  transform: rotate(20deg);
+}
+#navbar.light-nav #theme-toggle {
+  border-color: rgba(0,0,0,.14);
+  color: var(--text-muted);
+}
+#navbar.light-nav #theme-toggle:hover {
+  background: var(--violet-soft);
+  border-color: var(--violet);
+  color: var(--violet);
+}
+
+/* ── Icon visibility ── */
+.icon-sun  { display: none; }
+.icon-moon { display: block; }
+
 .hamburger {
   display: none; flex-direction: column; gap: 5px;
   background: none; border: none; cursor: pointer; padding: 4px;
@@ -72,18 +105,21 @@
 .mobile-menu {
   display: flex; flex-direction: column;
   position: fixed; top: 68px; left: 0; right: 0; z-index: 99;
-  background: var(--dark-2); border-bottom: 1px solid var(--dark-border);
-  padding: 0 2rem; max-height: 0; overflow: hidden;
+  background: rgba(250,250,248,.97);
+  border-bottom: 1px solid var(--border);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  padding: 0 1.5rem; max-height: 0; overflow: hidden;
   transition: max-height .38s cubic-bezier(.4,0,.2,1), padding .3s ease;
 }
 .mobile-menu.open {
   max-height: 480px;
-  padding: 1rem 2rem;
+  padding: .75rem 1.5rem;
 }
 .mobile-link {
   padding: .875rem 0; font-size: .95rem; font-weight: 500;
-  color: rgba(255,255,255,.55); border-bottom: 1px solid var(--dark-border);
+  color: var(--text-muted); border-bottom: 1px solid var(--border);
   transition: color .2s;
 }
 .mobile-link:last-child { border: none; }
-.mobile-link:hover { color: var(--white); }
+.mobile-link:hover { color: var(--violet); }

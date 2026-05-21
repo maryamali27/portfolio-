@@ -22,38 +22,31 @@
 
 [data-theme="dark"] body { background: #09090b; }
 
-/* ── Theme toggle button ── */
-#theme-toggle {
-  width: 36px; height: 36px; border-radius: 50%;
-  background: transparent;
-  border: 1px solid rgba(255,255,255,.18);
-  color: rgba(255,255,255,.6);
-  cursor: pointer; flex-shrink: 0;
-  display: flex; align-items: center; justify-content: center;
-  transition: background .2s, border-color .2s, color .2s, transform .2s;
-}
-#theme-toggle svg { width: 16px; height: 16px; flex-shrink: 0; }
-#theme-toggle:hover {
-  background: rgba(255,255,255,.1);
-  border-color: rgba(255,255,255,.35);
-  color: #fff;
-  transform: rotate(20deg);
-}
-#navbar.light-nav #theme-toggle {
-  border-color: var(--border);
-  color: var(--text-muted);
-}
-#navbar.light-nav #theme-toggle:hover {
-  background: var(--light-2);
-  border-color: var(--violet);
-  color: var(--violet);
-}
-
-/* Icon visibility */
-.icon-sun { display: none; }
-.icon-moon { display: block; }
+/* ── Icon visibility (dark mode flips sun/moon) ── */
 [data-theme="dark"] .icon-sun  { display: block; }
 [data-theme="dark"] .icon-moon { display: none; }
+
+/* ── Theme toggle: restore dark appearance on light-nav in dark mode ── */
+[data-theme="dark"] #navbar.light-nav #theme-toggle {
+  border-color: rgba(255,255,255,.2);
+  color: rgba(255,255,255,.65);
+}
+[data-theme="dark"] #navbar.light-nav #theme-toggle:hover {
+  background: rgba(255,255,255,.1);
+  border-color: rgba(255,255,255,.4);
+  color: #fff;
+}
+
+/* ── Mobile menu dark mode ── */
+[data-theme="dark"] .mobile-menu {
+  background: rgba(9,9,11,.96);
+  border-bottom-color: rgba(255,255,255,.07);
+}
+[data-theme="dark"] .mobile-link {
+  color: rgba(255,255,255,.5);
+  border-bottom-color: rgba(255,255,255,.07);
+}
+[data-theme="dark"] .mobile-link:hover { color: #fff; }
 
 /* ── Navbar ── */
 [data-theme="dark"] #navbar.light-nav {
@@ -68,8 +61,6 @@
 [data-theme="dark"] #navbar.light-nav .nav-links a:hover { color: #fff; }
 [data-theme="dark"] #navbar.light-nav .nav-links a.active { color: var(--violet-glow); }
 [data-theme="dark"] #navbar.light-nav .hamburger span { background: rgba(255,255,255,.6); }
-[data-theme="dark"] #navbar.light-nav #theme-toggle { border-color: rgba(255,255,255,.18); color: rgba(255,255,255,.6); }
-[data-theme="dark"] #navbar.light-nav #theme-toggle:hover { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.35); color: #fff; }
 
 /* ── Section chrome ── */
 [data-theme="dark"] .section-title { color: #e4e4e7; }
