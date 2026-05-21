@@ -1,0 +1,218 @@
+/* ============================================================
+   DARK MODE  —  triggered by OS/browser dark preference
+   ============================================================ */
+@media (prefers-color-scheme: dark) {
+
+  /* ── Token overrides ── */
+  :root {
+    --light:      #0e0e10;
+    --light-2:    #111113;
+    --white:      #18181b;
+    --text:       #e4e4e7;
+    --text-muted: #a1a1aa;
+    --text-dim:   #71717a;
+    --border:     #2e2e32;
+    --shadow-sm:  0 1px 3px rgba(0,0,0,.5), 0 1px 2px rgba(0,0,0,.4);
+    --shadow:     0 4px 16px rgba(0,0,0,.5), 0 1px 4px rgba(0,0,0,.35);
+    --shadow-lg:  0 20px 60px rgba(0,0,0,.6), 0 4px 16px rgba(0,0,0,.4);
+    --shadow-violet: 0 8px 32px rgba(124,58,237,.4);
+    --violet-soft: rgba(124,58,237,.18);
+  }
+
+  body { background: #09090b; }
+
+  /* ── Navbar stays dark in dark mode ── */
+  #navbar.light-nav {
+    background: rgba(9,9,11,.9);
+    border-bottom-color: rgba(255,255,255,.07);
+    box-shadow: none;
+  }
+  #navbar.light-nav .nav-logo { color: #fff; }
+  #navbar.light-nav .nav-logo span { color: var(--violet-glow); }
+  #navbar.light-nav .nav-links a { color: rgba(255,255,255,.45); }
+  #navbar.light-nav .nav-links a::after { background: var(--violet-glow); }
+  #navbar.light-nav .nav-links a:hover { color: #fff; }
+  #navbar.light-nav .nav-links a.active { color: var(--violet-glow); }
+  #navbar.light-nav .hamburger span { background: rgba(255,255,255,.6); }
+
+  /* ── Section chrome ── */
+  .section-title { color: #e4e4e7; }
+  .section-sub   { color: #71717a; }
+  .section-eyebrow { color: var(--violet-glow); }
+  .section-eyebrow::before { background: var(--violet-glow); }
+  .section-num { -webkit-text-stroke-color: rgba(255,255,255,.055); }
+
+  /* ── About ── */
+  .about-card {
+    border-color: rgba(255,255,255,.07);
+    box-shadow: 0 4px 24px rgba(0,0,0,.45);
+  }
+  .about-card::before {
+    background: linear-gradient(90deg, var(--violet), var(--violet-glow));
+  }
+  .about-item { border-bottom-color: rgba(255,255,255,.07); }
+  .about-item:hover { background: rgba(255,255,255,.04); }
+
+  .about-icon { background: rgba(124,58,237,.18); color: var(--violet-glow); }
+  .about-item:nth-child(2) .about-icon { background: rgba(5,150,105,.18);  color: #34d399; }
+  .about-item:nth-child(3) .about-icon { background: rgba(194,65,12,.18);  color: #fb923c; }
+  .about-item:nth-child(4) .about-icon { background: rgba(29,78,216,.18);  color: #60a5fa; }
+  .about-item:nth-child(5) .about-icon { background: rgba(180,83,9,.18);   color: #fbbf24; }
+
+  .about-link {
+    background: rgba(255,255,255,.05);
+    border-color: rgba(255,255,255,.09);
+    color: rgba(255,255,255,.5);
+    box-shadow: none;
+  }
+  .about-link:hover {
+    background: rgba(124,58,237,.12);
+    border-color: rgba(124,58,237,.4);
+    color: var(--violet-glow);
+    box-shadow: 0 4px 12px rgba(124,58,237,.18);
+  }
+
+  /* ── Skills ── */
+  .skill-category { border-color: rgba(255,255,255,.07); }
+  .skill-category:hover {
+    background: rgba(255,255,255,.03);
+    border-color: rgba(124,58,237,.3);
+    box-shadow: 0 4px 24px rgba(124,58,237,.1);
+  }
+
+  /* Plain tags */
+  .skill-tag {
+    background: rgba(255,255,255,.06);
+    border-color: rgba(255,255,255,.1);
+    color: rgba(255,255,255,.6);
+  }
+  .skill-tag:hover { background: rgba(124,58,237,.18); color: var(--violet-glow); border-color: rgba(124,58,237,.35); }
+
+  /* Language-colored tags */
+  .skill-tag.rust,  .skill-tag.html, .skill-tag.git
+              { background: rgba(194,65,12,.16); color: #fb923c; border-color: rgba(194,65,12,.35); }
+  .skill-tag.go, .skill-tag.node, .skill-tag.py
+              { background: rgba(5,150,105,.14);  color: #34d399; border-color: rgba(5,150,105,.35); }
+  .skill-tag.js, .skill-tag.ws, .skill-tag.linux
+              { background: rgba(217,119,6,.14);  color: #fbbf24; border-color: rgba(217,119,6,.35); }
+  .skill-tag.ts, .skill-tag.api, .skill-tag.sql
+              { background: rgba(37,99,235,.14);  color: #60a5fa; border-color: rgba(37,99,235,.35); }
+  .skill-tag.css, .skill-tag.dom, .skill-tag.docker
+              { background: rgba(3,105,161,.14);  color: #38bdf8; border-color: rgba(3,105,161,.35); }
+  .skill-tag.php, .skill-tag.sys, .skill-tag.fw, .skill-tag.async
+              { background: rgba(124,58,237,.16); color: #c084fc; border-color: rgba(124,58,237,.35); }
+  .skill-tag.gql  { background: rgba(157,23,77,.14);  color: #f472b6; border-color: rgba(157,23,77,.35); }
+  .skill-tag.sec, .skill-tag.mem
+              { background: rgba(190,18,60,.14);  color: #f87171; border-color: rgba(190,18,60,.35); }
+  .skill-tag.conc { background: rgba(15,118,110,.14); color: #2dd4bf; border-color: rgba(15,118,110,.35); }
+  .skill-tag.algo { background: rgba(51,65,85,.22);  color: #94a3b8; border-color: rgba(51,65,85,.4); }
+  .skill-tag.vsc  { background: rgba(29,78,216,.14);  color: #60a5fa; border-color: rgba(29,78,216,.35); }
+
+  /* ── Projects ── */
+  .project-card {
+    background: #1c1c1f;
+    box-shadow:
+      0 0 0 1px rgba(255,255,255,.05),
+      0 8px 0 -3px rgba(0,0,0,.6),
+      0 8px 0 -2px rgba(255,255,255,.04),
+      0 16px 0 -6px rgba(0,0,0,.5),
+      0 16px 0 -5px rgba(255,255,255,.02);
+  }
+  .project-card:hover {
+    box-shadow:
+      0 0 0 1px rgba(255,255,255,.08),
+      0 12px 0 -3px rgba(0,0,0,.6),
+      0 12px 0 -2px rgba(255,255,255,.04),
+      0 22px 0 -5px rgba(255,255,255,.02),
+      0 22px 0 -4px rgba(0,0,0,.5),
+      0 32px 56px rgba(0,0,0,.4);
+  }
+
+  /* Language-tinted dark card backgrounds */
+  .project-card[data-tags~="rust"]       { background: rgba(194,65,12,.1); }
+  .project-card[data-tags~="go"]         { background: rgba(5,150,105,.08); }
+  .project-card[data-tags~="javascript"] { background: rgba(217,119,6,.08); }
+  .project-card[data-tags~="typescript"] { background: rgba(37,99,235,.09); }
+  .project-card[data-tags~="python"]     { background: rgba(22,163,74,.08); }
+  .project-card[data-tags~="php"]        { background: rgba(124,58,237,.1); }
+  .project-card[data-tags~="security"]   { background: rgba(124,58,237,.1); }
+  .project-card[data-tags~="html"]       { background: rgba(234,88,12,.08); }
+
+  /* Language-tinted hover glows (dark versions) */
+  .project-card[data-tags~="rust"]:hover       { box-shadow: 0 0 0 1px rgba(194,65,12,.2), 0 12px 0 -3px rgba(0,0,0,.6), 0 12px 0 -2px rgba(255,255,255,.04), 0 22px 0 -5px rgba(255,255,255,.02), 0 22px 0 -4px rgba(0,0,0,.5), 0 32px 56px rgba(194,65,12,.22); }
+  .project-card[data-tags~="go"]:hover         { box-shadow: 0 0 0 1px rgba(5,150,105,.18), 0 12px 0 -3px rgba(0,0,0,.6), 0 12px 0 -2px rgba(255,255,255,.04), 0 22px 0 -5px rgba(255,255,255,.02), 0 22px 0 -4px rgba(0,0,0,.5), 0 32px 56px rgba(5,150,105,.2); }
+  .project-card[data-tags~="javascript"]:hover { box-shadow: 0 0 0 1px rgba(217,119,6,.18), 0 12px 0 -3px rgba(0,0,0,.6), 0 12px 0 -2px rgba(255,255,255,.04), 0 22px 0 -5px rgba(255,255,255,.02), 0 22px 0 -4px rgba(0,0,0,.5), 0 32px 56px rgba(217,119,6,.18); }
+  .project-card[data-tags~="typescript"]:hover { box-shadow: 0 0 0 1px rgba(37,99,235,.18), 0 12px 0 -3px rgba(0,0,0,.6), 0 12px 0 -2px rgba(255,255,255,.04), 0 22px 0 -5px rgba(255,255,255,.02), 0 22px 0 -4px rgba(0,0,0,.5), 0 32px 56px rgba(37,99,235,.2); }
+  .project-card[data-tags~="python"]:hover     { box-shadow: 0 0 0 1px rgba(22,163,74,.18), 0 12px 0 -3px rgba(0,0,0,.6), 0 12px 0 -2px rgba(255,255,255,.04), 0 22px 0 -5px rgba(255,255,255,.02), 0 22px 0 -4px rgba(0,0,0,.5), 0 32px 56px rgba(22,163,74,.2); }
+  .project-card[data-tags~="php"]:hover        { box-shadow: 0 0 0 1px rgba(124,58,237,.2), 0 12px 0 -3px rgba(0,0,0,.6), 0 12px 0 -2px rgba(255,255,255,.04), 0 22px 0 -5px rgba(255,255,255,.02), 0 22px 0 -4px rgba(0,0,0,.5), 0 32px 56px rgba(124,58,237,.22); }
+  .project-card[data-tags~="security"]:hover   { box-shadow: 0 0 0 1px rgba(124,58,237,.2), 0 12px 0 -3px rgba(0,0,0,.6), 0 12px 0 -2px rgba(255,255,255,.04), 0 22px 0 -5px rgba(255,255,255,.02), 0 22px 0 -4px rgba(0,0,0,.5), 0 32px 56px rgba(124,58,237,.22); }
+  .project-card[data-tags~="html"]:hover       { box-shadow: 0 0 0 1px rgba(234,88,12,.18), 0 12px 0 -3px rgba(0,0,0,.6), 0 12px 0 -2px rgba(255,255,255,.04), 0 22px 0 -5px rgba(255,255,255,.02), 0 22px 0 -4px rgba(0,0,0,.5), 0 32px 56px rgba(234,88,12,.2); }
+
+  .project-top::before { color: rgba(255,255,255,.2); }
+  .project-title { color: #e4e4e7; }
+  .project-footer { border-top-color: rgba(255,255,255,.07); }
+
+  /* Senior project */
+  .project-card.senior-project {
+    background: linear-gradient(145deg, rgba(245,158,11,.1), rgba(194,65,12,.08));
+    box-shadow: 0 0 0 1.5px rgba(245,158,11,.22), 0 8px 0 -3px rgba(0,0,0,.6), 0 8px 0 -2px rgba(255,255,255,.04), 0 16px 0 -6px rgba(0,0,0,.5), 0 16px 0 -5px rgba(255,255,255,.02);
+  }
+  .project-card.senior-project:hover {
+    box-shadow: 0 0 0 1.5px rgba(245,158,11,.38), 0 12px 0 -3px rgba(0,0,0,.6), 0 12px 0 -2px rgba(255,255,255,.04), 0 22px 0 -5px rgba(255,255,255,.02), 0 22px 0 -4px rgba(0,0,0,.5), 0 32px 56px rgba(245,158,11,.18);
+  }
+  .senior-badge { background: rgba(245,158,11,.14); border-color: rgba(245,158,11,.28); color: #fbbf24; }
+
+  /* Lang badges */
+  .lang-badge { background: rgba(255,255,255,.08); color: rgba(255,255,255,.55); border-color: rgba(255,255,255,.12); }
+  .lang-badge.rust { background: rgba(194,65,12,.2);  color: #fb923c; border-color: rgba(194,65,12,.4); }
+  .lang-badge.go   { background: rgba(5,150,105,.18); color: #34d399; border-color: rgba(5,150,105,.4); }
+  .lang-badge.js   { background: rgba(217,119,6,.18); color: #fbbf24; border-color: rgba(217,119,6,.4); }
+  .lang-badge.ts   { background: rgba(37,99,235,.18); color: #60a5fa; border-color: rgba(37,99,235,.4); }
+  .lang-badge.py   { background: rgba(22,163,74,.18); color: #4ade80; border-color: rgba(22,163,74,.4); }
+  .lang-badge.php  { background: rgba(124,58,237,.18);color: #c084fc; border-color: rgba(124,58,237,.4); }
+  .lang-badge.html { background: rgba(194,65,12,.2);  color: #fb923c; border-color: rgba(194,65,12,.4); }
+  .lang-badge.css  { background: rgba(3,105,161,.18); color: #38bdf8; border-color: rgba(3,105,161,.4); }
+
+  /* Platform badges */
+  .platform-badge.reboot { background: rgba(194,65,12,.18); color: #fb923c; border-color: rgba(194,65,12,.35); }
+  .platform-badge.github { background: rgba(255,255,255,.08); color: rgba(255,255,255,.8); }
+  .platform-badge.collab { background: rgba(124,58,237,.18); color: var(--violet-glow); border-color: rgba(124,58,237,.35); }
+
+  /* Carousel */
+  .carousel-wrap::before { background: linear-gradient(to right, #111113, transparent); }
+  .carousel-wrap::after  { background: linear-gradient(to left,  #111113, transparent); }
+  .carousel-btn {
+    background: #1c1c1f;
+    border-color: rgba(255,255,255,.1);
+    color: rgba(255,255,255,.7);
+    box-shadow: 0 2px 12px rgba(0,0,0,.4);
+  }
+  .carousel-btn:hover { background: var(--violet); border-color: var(--violet); color: #fff; }
+
+  /* Search + filter */
+  .search-bar input {
+    background: #1c1c1f;
+    border-color: rgba(255,255,255,.1);
+    color: #e4e4e7;
+  }
+  .search-bar input::placeholder { color: rgba(255,255,255,.25); }
+  .search-bar input:focus {
+    border-color: rgba(124,58,237,.6);
+    background: rgba(124,58,237,.08);
+    box-shadow: 0 0 0 3px rgba(124,58,237,.15);
+  }
+  .search-clear { color: rgba(255,255,255,.4); }
+  .search-clear:hover { color: rgba(255,255,255,.8); background: rgba(255,255,255,.07); }
+
+  .filter-btn {
+    background: #1c1c1f;
+    border-color: rgba(255,255,255,.1);
+    color: rgba(255,255,255,.45);
+  }
+  .filter-btn:hover { border-color: var(--violet-glow); color: var(--violet-glow); }
+  .filter-btn.active { background: var(--violet); color: #fff; border-color: var(--violet); }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar-track { background: #0e0e10; }
+  ::-webkit-scrollbar-thumb { background: var(--violet); }
+}
