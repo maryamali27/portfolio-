@@ -81,8 +81,19 @@
   /* Projects */
   .project-card { flex: 0 0 82vw; }
   .project-card.featured { flex: 0 0 82vw; }
-  .carousel-btn { display: none; }
   .projects-toolbar { gap: .75rem; }
+
+  /* Carousel arrows — move to bottom corners on mobile */
+  .carousel-wrap { padding-bottom: 3rem; }
+  .carousel-btn {
+    display: flex;
+    top: auto; bottom: 0;
+    transform: none;
+    width: 36px; height: 36px;
+  }
+  .carousel-btn:hover { transform: scale(1.08); }
+  .carousel-btn.prev { left: 0.25rem; }
+  .carousel-btn.next { right: 0.25rem; }
 
   /* Contact */
   .form-row { grid-template-columns: 1fr; }

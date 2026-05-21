@@ -51,6 +51,10 @@
 .nav-links a.active { color: var(--violet-glow); }
 #navbar.light-nav .nav-links a.active { color: var(--violet); }
 
+.nav-actions {
+  display: flex; align-items: center; gap: .625rem;
+}
+
 .hamburger {
   display: none; flex-direction: column; gap: 5px;
   background: none; border: none; cursor: pointer; padding: 4px;
